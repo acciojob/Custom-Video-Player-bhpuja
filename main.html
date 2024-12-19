@@ -1,84 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Video Player</title>
-  <style>
-    /* Styling for the custom video player */
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    .video-player {
-      width: 800px;
-      background-color: #000;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    video {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-    }
-    .progress-container {
-      flex-grow: 1;
-      margin: 0 10px;
-      position: relative;
-    }
-    .progress {
-      width: 100%;
-      height: 5px;
-      background-color: #ccc;
-      border-radius: 5px;
-    }
-    .progress__filled {
-      height: 100%;
-      background-color: #f00;
-      border-radius: 5px;
-      width: 0;
-    }
-    .button {
-      background: none;
-      border: none;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
-    }
-    .slider {
-      width: 100px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="video-player">
-    <video id="video" src="your-video-file.mp4"></video>
-    <div class="controls">
-      <button class="button" id="playPauseBtn">►</button>
-      <button class="button" id="skipBackBtn">« 10s</button>
-      <button class="button" id="skipForwardBtn">25s »</button>
-
-      <div class="progress-container">
-        <div class="progress">
-          <div class="progress__filled" id="progressFilled"></div>
+    <div class="video-container">
+        <video id="video" width="600" src="your-video.mp4"></video>
+        <div class="controls">
+            <!-- Play/Pause Button -->
+            <button id="play-pause-btn">►</button>
+            
+            <!-- Progress Bar -->
+            <div class="progress">
+                <div id="progress-filled" class="progress__filled"></div>
+            </div>
+            
+            <!-- Volume Control -->
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
+            
+            <!-- Playback Speed Control -->
+            <input type="range" id="playback-speed" min="0.5" max="2" step="0.1" value="1">
+            
+            <!-- Skip Buttons -->
+            <button id="skip-backward">« 10s</button>
+            <button id="skip-forward">25s »</button>
         </div>
-      </div>
-
-      <input type="range" class="slider" id="volume" value="100" max="100" />
-      <input type="range" class="slider" id="playbackSpeed" value="1" step="0.1" min="0.5" max="2" />
     </div>
-  </div>
 
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
+
