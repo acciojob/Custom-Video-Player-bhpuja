@@ -2,6 +2,7 @@
 // scripts.js
 
 // Get all the elements
+// Get elements
 const video = document.getElementById('video');
 const playPauseButton = document.getElementById('play-pause-btn');
 const progressFilled = document.getElementById('progress-filled');
@@ -47,6 +48,6 @@ skipForwardButton.addEventListener('click', () => {
     video.currentTime += 25;
 });
 
-// Set initial values
+// Set initial values for volume and speed control
 volumeControl.value = video.volume;
 playbackSpeedControl.value = video.playbackRate;
