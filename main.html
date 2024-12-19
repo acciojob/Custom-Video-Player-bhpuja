@@ -7,23 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="video-container">
-        <video id="video" width="600" src="your-video.mp4"></video>
+        <video id="video" width="600" src="your-video.mp4" preload="metadata"></video>
+
+        <!-- Controls -->
         <div class="controls">
             <!-- Play/Pause Button -->
             <button id="play-pause-btn">►</button>
-            
+
             <!-- Progress Bar -->
             <div class="progress">
                 <div id="progress-filled" class="progress__filled"></div>
             </div>
-            
+
             <!-- Volume Control -->
             <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
-            
+
             <!-- Playback Speed Control -->
             <input type="range" id="playback-speed" min="0.5" max="2" step="0.1" value="1">
-            
+
             <!-- Skip Buttons -->
             <button id="skip-backward">« 10s</button>
             <button id="skip-forward">25s »</button>
@@ -33,4 +36,5 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
